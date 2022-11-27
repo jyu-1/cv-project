@@ -4,7 +4,46 @@
     box-sizing: border-box;
 }
 
+/* Body */
+.app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+.header {
+    flex: 0 0 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+}
+
+/* Main */
+.main {
+    flex: 1;
+    display: flex;
+}
+
+.left,
+.right {
+    flex: 1 1 0;
+    margin: 50px;
+    padding: 25px;
+    border: 1px solid black;
+    box-shadow: 0 0 10px black;
+}
+
 form {
     display: flex;
     flex-direction: column;
+}
+
+/* Footer */
+.footer {
+    flex: 0 0 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

@@ -12,12 +12,26 @@ class App extends Component {
     render() {
         return (
             <div className="app">
-                <div className="left">
-                    <Contact />
-                    <Education />
-                    <Experience />
+                <div className="header">CV Builder</div>
+                <div className="main">
+                    <div className="left">
+                        <Contact />
+                        <Education />
+                        <Experience />
+                    </div>
+                    <div className="right">Placeholder</div>
                 </div>
-                <div className="right"></div>
+                <div className="footer">
+                    <span>
+                        Copyright © 2022{" "}
+                        <a
+                            href="https://github.com/jyu-1/cv-project"
+                            title="github link to this project"
+                        >
+                            jyu-1
+                        </a>
+                    </span>
+                </div>
             </div>
         );
     }

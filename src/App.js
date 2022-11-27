@@ -7,6 +7,41 @@ import Experience from "./components/Experience";
 class App extends Component {
     constructor() {
         super();
+
+        this.state = {
+            personalInfo: {
+                name: "",
+                title: "",
+                phone: "",
+                email: "",
+                city: "",
+            },
+
+            educationInfo: {
+                module: [
+                    {
+                        university: "",
+                        city: "",
+                        degree: "",
+                        start: "",
+                        end: "",
+                    },
+                ],
+            },
+
+            experienceInfo: {
+                module: [
+                    {
+                        position: "",
+                        company: "",
+                        city: "",
+                        start: "",
+                        end: "",
+                        description: "",
+                    },
+                ],
+            },
+        };
     }
 
     render() {

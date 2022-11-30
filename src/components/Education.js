@@ -8,6 +8,7 @@ class Education extends Component {
     render() {
         return (
             <div>
+                <div>Education</div>
                 <form>
                     <input type="text" id="uni-name" placeholder="University" />
                     <input type="text" id="uni-city" placeholder="City" />

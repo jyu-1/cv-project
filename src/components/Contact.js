@@ -8,6 +8,7 @@ class Contact extends Component {
     render() {
         return (
             <div>
+                <div>Contact Info</div>
                 <form>
                     <input
                         type="text"

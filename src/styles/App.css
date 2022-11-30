@@ -35,6 +35,14 @@
     box-shadow: 0 0 10px black;
 }
 
+.left {
+    align-self: flex-start;
+}
+
+.left > * {
+    margin-bottom: 20px;
+}
+
 form {
     display: flex;
     flex-direction: column;

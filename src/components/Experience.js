@@ -8,6 +8,7 @@ class Experience extends Component {
     render() {
         return (
             <div>
+                <div>Work Experience</div>
                 <form>
                     <input
                         type="text"

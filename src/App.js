@@ -1,61 +1,13 @@
 import "./styles/App.css";
 import React, { Component } from "react";
-import Contact from "./components/Contact";
-import Education from "./components/Education";
-import Experience from "./components/Experience";
+import Main from "./components/Main";
 
 class App extends Component {
-    constructor() {
-        super();
-
-        this.state = {
-            personalInfo: {
-                name: "",
-                title: "",
-                phone: "",
-                email: "",
-                city: "",
-            },
-
-            educationInfo: {
-                module: [
-                    {
-                        university: "",
-                        city: "",
-                        degree: "",
-                        start: "",
-                        end: "",
-                    },
-                ],
-            },
-
-            experienceInfo: {
-                module: [
-                    {
-                        position: "",
-                        company: "",
-                        city: "",
-                        start: "",
-                        end: "",
-                        description: "",
-                    },
-                ],
-            },
-        };
-    }
-
     render() {
         return (
             <div className="app">
                 <div className="header">CV Builder</div>
-                <div className="main">
-                    <div className="left">
-                        <Contact />
-                        <Education />
-                        <Experience />
-                    </div>
-                    <div className="right">Placeholder</div>
-                </div>
+                <Main />
                 <div className="footer">
                     <span>
                         Copyright © 2022{" "}

@@ -1,10 +1,6 @@
 import React, { Component } from "react";
 
 class Resume extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         const { info, education, experience } = this.props;
 

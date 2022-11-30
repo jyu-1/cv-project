@@ -48,46 +48,57 @@ class Main extends Component {
     }
 
     handleInfoName = (e) => {
+        e.preventDefault();
         this.setState({
             personalInfo: {
+                ...this.state.personalInfo,
                 name: e.target.value,
             },
         });
     };
 
     handleInfoTitle = (e) => {
+        e.preventDefault();
         this.setState({
             personalInfo: {
+                ...this.state.personalInfo,
                 title: e.target.value,
             },
         });
     };
 
     handleInfoPhone = (e) => {
+        e.preventDefault();
         this.setState({
             personalInfo: {
+                ...this.state.personalInfo,
                 phone: e.target.value,
             },
         });
     };
 
     handleInfoEmail = (e) => {
+        e.preventDefault();
         this.setState({
             personalInfo: {
+                ...this.state.personalInfo,
                 email: e.target.value,
             },
         });
     };
 
     handleInfoCity = (e) => {
+        e.preventDefault();
         this.setState({
             personalInfo: {
+                ...this.state.personalInfo,
                 city: e.target.value,
             },
         });
     };
 
     handleEduUniversity = (e) => {
+        e.preventDefault();
         this.setState({
             educationInfo: {
                 module: [
@@ -100,6 +111,7 @@ class Main extends Component {
     };
 
     handleEduCity = (e) => {
+        e.preventDefault();
         this.setState({
             educationInfo: {
                 module: [
@@ -112,6 +124,7 @@ class Main extends Component {
     };
 
     handleEduDegree = (e) => {
+        e.preventDefault();
         this.setState({
             educationInfo: {
                 module: [
@@ -124,6 +137,7 @@ class Main extends Component {
     };
 
     handleEduStart = (e) => {
+        e.preventDefault();
         this.setState({
             educationInfo: {
                 module: [
@@ -136,6 +150,7 @@ class Main extends Component {
     };
 
     handleEduEnd = (e) => {
+        e.preventDefault();
         this.setState({
             educationInfo: {
                 module: [
@@ -148,6 +163,7 @@ class Main extends Component {
     };
 
     handleExpPosition = (e) => {
+        e.preventDefault();
         this.setState({
             experienceInfo: {
                 module: [
@@ -160,6 +176,7 @@ class Main extends Component {
     };
 
     handleExpCompany = (e) => {
+        e.preventDefault();
         this.setState({
             experienceInfo: {
                 module: [
@@ -172,6 +189,7 @@ class Main extends Component {
     };
 
     handleExpCity = (e) => {
+        e.preventDefault();
         this.setState({
             experienceInfo: {
                 module: [
@@ -184,6 +202,7 @@ class Main extends Component {
     };
 
     handleExpStart = (e) => {
+        e.preventDefault();
         this.setState({
             experienceInfo: {
                 module: [
@@ -196,6 +215,7 @@ class Main extends Component {
     };
 
     handleExpEnd = (e) => {
+        e.preventDefault();
         this.setState({
             experienceInfo: {
                 module: [
@@ -208,6 +228,7 @@ class Main extends Component {
     };
 
     handleExpDescription = (e) => {
+        e.preventDefault();
         this.setState({
             experienceInfo: {
                 module: [

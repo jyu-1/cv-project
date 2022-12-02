@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class Education extends Component {
     render() {
-        const { data, addEdu, handleEduUniversity } = this.props;
+        const { data, addEdu, deleteEdu, handleEduUniversity } = this.props;
 
         return (
             <div>
@@ -36,6 +36,11 @@ class Education extends Component {
                                 id="uni-end"
                                 placeholder="Graduate Month and Year"
                             />
+                            <button
+                                onClick={(event) => deleteEdu(event, e.key)}
+                            >
+                                Delete
+                            </button>
                         </form>
                     );
                 })}

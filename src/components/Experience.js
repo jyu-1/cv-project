@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class Experience extends Component {
     render() {
-        const { data, addExp } = this.props;
+        const { data, addExp, deleteExp } = this.props;
 
         return (
             <div>
@@ -40,6 +40,11 @@ class Experience extends Component {
                                 id="exp-description"
                                 placeholder="Job Description"
                             />
+                            <button
+                                onClick={(event) => deleteExp(event, e.key)}
+                            >
+                                Delete
+                            </button>
                         </form>
                     );
                 })}

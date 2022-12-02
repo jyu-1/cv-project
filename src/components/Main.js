@@ -279,6 +279,28 @@ class Main extends Component {
         });
     };
 
+    deleteEdu = (e, key) => {
+        e.preventDefault();
+        this.setState({
+            educationInfo: {
+                module: this.state.educationInfo.module.filter(
+                    (item) => item.key !== key
+                ),
+            },
+        });
+    };
+
+    deleteExp = (e, key) => {
+        e.preventDefault();
+        this.setState({
+            experienceInfo: {
+                module: this.state.experienceInfo.module.filter(
+                    (item) => item.key !== key
+                ),
+            },
+        });
+    };
+
     render() {
         return (
             <div className="main">
@@ -297,6 +319,7 @@ class Main extends Component {
                         handleEduStart={this.handleEduStart}
                         handleEduEnd={this.handleEduEnd}
                         addEdu={this.addEducation}
+                        deleteEdu={this.deleteEdu}
                         data={this.state.educationInfo}
                     />
                     <Experience
@@ -307,6 +330,7 @@ class Main extends Component {
                         handleExpEnd={this.handleExpEnd}
                         handleExpDescription={this.handleExpDescription}
                         addExp={this.addExperience}
+                        deleteExp={this.deleteExp}
                         data={this.state.experienceInfo}
                     />
                 </div>

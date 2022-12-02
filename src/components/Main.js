@@ -297,6 +297,7 @@ class Main extends Component {
                         handleEduStart={this.handleEduStart}
                         handleEduEnd={this.handleEduEnd}
                         addEdu={this.addEducation}
+                        data={this.state.educationInfo}
                     />
                     <Experience
                         handleExpPosition={this.handleExpPosition}
@@ -306,6 +307,7 @@ class Main extends Component {
                         handleExpEnd={this.handleExpEnd}
                         handleExpDescription={this.handleExpDescription}
                         addExp={this.addExperience}
+                        data={this.state.experienceInfo}
                     />
                 </div>
                 <div className="right">

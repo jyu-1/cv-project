@@ -311,6 +311,7 @@ class Main extends Component {
                         handleInfoPhone={this.handleInfoPhone}
                         handleInfoEmail={this.handleInfoEmail}
                         handleInfoCity={this.handleInfoCity}
+                        data={this.state.personalInfo}
                     />
                     <Education
                         handleEduUniversity={this.handleEduUniversity}

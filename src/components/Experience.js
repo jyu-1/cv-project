@@ -25,6 +25,7 @@ class Experience extends Component {
                         placeholder="Job Description"
                     />
                 </form>
+                <button onClick={this.props.addExp}>Add</button>
             </div>
         );
     }

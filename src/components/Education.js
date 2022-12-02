@@ -6,7 +6,12 @@ class Education extends Component {
             <div>
                 <div>Education</div>
                 <form>
-                    <input type="text" id="uni-name" placeholder="University" />
+                    <input
+                        type="text"
+                        id="uni-name"
+                        placeholder="University"
+                        onChange={this.props.handleEduUniversity}
+                    />
                     <input type="text" id="uni-city" placeholder="City" />
                     <input
                         type="text"
@@ -24,6 +29,7 @@ class Education extends Component {
                         placeholder="Graduate Month and Year"
                     />
                 </form>
+                <button onClick={this.props.addEdu}>Add</button>
             </div>
         );
     }

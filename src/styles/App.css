@@ -30,7 +30,6 @@
 .right {
     flex: 1 1 0px;
     margin: 50px;
-    padding: 25px;
     border: 1px solid black;
     box-shadow: 0 0 10px black;
 }
@@ -39,8 +38,9 @@
     align-self: flex-start;
 }
 
-.left > * {
-    margin-bottom: 20px;
+.left > *,
+.right > div > * {
+    margin: 25px;
 }
 
 form {

@@ -240,6 +240,45 @@ class Main extends Component {
         });
     };
 
+    addEducation = (e) => {
+        e.preventDefault();
+        this.setState({
+            educationInfo: {
+                module: [
+                    ...this.state.educationInfo.module,
+                    {
+                        university: "*University",
+                        city: "*University City",
+                        degree: "*Degree and Major",
+                        start: "*Start Date",
+                        end: "*Graduate Date",
+                        key: uniqid(),
+                    },
+                ],
+            },
+        });
+    };
+
+    addExperience = (e) => {
+        e.preventDefault();
+        this.setState({
+            experienceInfo: {
+                module: [
+                    ...this.state.experienceInfo.module,
+                    {
+                        position: "*Job Title",
+                        company: "*Company",
+                        city: "*Job City",
+                        start: "*Job Start",
+                        end: "*Job End",
+                        description: "*Job Description",
+                        key: uniqid(),
+                    },
+                ],
+            },
+        });
+    };
+
     render() {
         return (
             <div className="main">
@@ -257,6 +296,7 @@ class Main extends Component {
                         handleEduDegree={this.handleEduDegree}
                         handleEduStart={this.handleEduStart}
                         handleEduEnd={this.handleEduEnd}
+                        addEdu={this.addEducation}
                     />
                     <Experience
                         handleExpPosition={this.handleExpPosition}
@@ -265,6 +305,7 @@ class Main extends Component {
                         handleExpStart={this.handleExpStart}
                         handleExpEnd={this.handleExpEnd}
                         handleExpDescription={this.handleExpDescription}
+                        addExp={this.addExperience}
                     />
                 </div>
                 <div className="right">

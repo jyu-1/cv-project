@@ -7,7 +7,12 @@ class Education extends Component {
 
         return (
             <div>
-                <div>Education</div>
+                <div className="title-button">
+                    <div className="input-title">Education</div>
+                    <button className="add-button" onClick={addEducation}>
+                        Add
+                    </button>
+                </div>
                 {data.module.map((e) => {
                     return (
                         <form key={e.key}>
@@ -57,6 +62,7 @@ class Education extends Component {
                                 }
                             />
                             <button
+                                className="delete-button"
                                 onClick={(event) =>
                                     deleteEducation(event, e.key)
                                 }
@@ -66,8 +72,6 @@ class Education extends Component {
                         </form>
                     );
                 })}
-
-                <button onClick={addEducation}>Add</button>
             </div>
         );
     }

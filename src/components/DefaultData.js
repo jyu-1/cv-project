@@ -2,10 +2,10 @@ import uniqid from "uniqid";
 
 const data = {
     personalInfo: {
-        name: "Apple Seed",
+        name: "Jane Apple",
         title: "Software Engineer",
-        phone: "1234567890",
-        email: "apple@seed.com",
+        phone: "(626)123-4567",
+        email: "jane@apple.com",
         city: "Los Angeles",
     },
 
@@ -15,8 +15,8 @@ const data = {
                 university: "University of Southern California",
                 city: "Los Angeles",
                 degree: "Electrical Engineer",
-                start: "6/16",
-                end: "6/18",
+                start: "June 2016",
+                end: "June 2018",
                 key: uniqid(),
             },
         ],
@@ -28,7 +28,7 @@ const data = {
                 position: "Software Engineer",
                 company: "Engineering Company",
                 city: "Los Angeles",
-                start: "6/18",
+                start: "June 2018",
                 end: "Current",
                 description:
                     "Full-stack Software Engineer. Using React, Javascript, HTML and CSS for front-end; NodeJS for backend.",

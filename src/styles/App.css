@@ -4,6 +4,14 @@
     box-sizing: border-box;
 }
 
+body {
+    background-image: url(../assets/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
 /* Body */
 .app {
     display: flex;
@@ -18,24 +26,39 @@
     justify-content: center;
     align-items: center;
     font-size: 3rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-weight: bold;
 }
 
 /* Main */
 .main {
     flex: 1;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .left,
 .right {
     flex: 1 1 0px;
-    margin: 50px;
+    margin: 50px 20px;
     border: 1px solid black;
-    box-shadow: 0 0 10px black;
+    box-shadow: 10px 10px 10px black;
 }
 
 .left {
     align-self: flex-start;
+    min-width: 700px;
+    max-width: 1000px;
+    background-color: rgb(252, 239, 205);
+}
+
+.right {
+    align-self: flex-start;
+    min-width: 700px;
+    max-width: 1000px;
+    background-color: white;
 }
 
 .left > *,
@@ -46,6 +69,55 @@
 form {
     display: flex;
     flex-direction: column;
+    margin-bottom: 50px;
+}
+
+input {
+    height: 30px;
+    margin: 5px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.input-title {
+    font-size: 1.5rem;
+    margin: 5px;
+    flex: 1;
+}
+
+.delete-button {
+    margin: 5px;
+    height: 30px;
+    width: 100px;
+    background-color: rgb(255, 174, 187);
+    border-radius: 10px;
+    border: none;
+    align-self: flex-end;
+}
+
+.delete-button:hover {
+    cursor: pointer;
+    background-color: rgb(255, 147, 165);
+}
+
+.add-button {
+    margin: 5px;
+    height: 30px;
+    width: 100px;
+    background-color: rgb(165, 231, 253);
+    border-radius: 10px;
+    border: none;
+    justify-self: flex-end;
+}
+
+.add-button:hover {
+    cursor: pointer;
+    background-color: rgb(108, 218, 255);
+}
+
+.title-button {
+    display: flex;
 }
 
 /* Footer */
@@ -54,4 +126,6 @@ form {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
 }

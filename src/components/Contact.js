@@ -6,7 +6,7 @@ class Contact extends Component {
 
         return (
             <div>
-                <div>Contact Info</div>
+                <div className="input-title">Contact Information</div>
                 <form>
                     <input
                         type="text"

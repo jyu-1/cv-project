@@ -7,7 +7,12 @@ class Experience extends Component {
 
         return (
             <div>
-                <div>Work Experience</div>
+                <div className="title-button">
+                    <div className="input-title">Work Experience</div>
+                    <button className="add-button" onClick={addExperience}>
+                        Add
+                    </button>
+                </div>
                 {data.module.map((e) => {
                     return (
                         <form key={e.key}>
@@ -70,6 +75,7 @@ class Experience extends Component {
                                 }
                             />
                             <button
+                                className="delete-button"
                                 onClick={(event) =>
                                     deleteExperience(event, e.key)
                                 }
@@ -79,7 +85,6 @@ class Experience extends Component {
                         </form>
                     );
                 })}
-                <button onClick={addExperience}>Add</button>
             </div>
         );
     }

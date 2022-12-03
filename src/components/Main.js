@@ -118,12 +118,14 @@ class Main extends Component {
                         handleContact={this.handleContact}
                         data={this.state.personalInfo}
                     />
+                    <hr />
                     <Education
                         handleEducation={this.handleEducation}
                         addEducation={this.addEducation}
                         deleteEducation={this.deleteEducation}
                         data={this.state.educationInfo}
                     />
+                    <hr />
                     <Experience
                         handleExperience={this.handleExperience}
                         addExperience={this.addExperience}

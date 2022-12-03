@@ -47,56 +47,6 @@ class Main extends Component {
         };
     }
 
-    handleInfoName = (e) => {
-        e.preventDefault();
-        this.setState({
-            personalInfo: {
-                ...this.state.personalInfo,
-                name: e.target.value,
-            },
-        });
-    };
-
-    handleInfoTitle = (e) => {
-        e.preventDefault();
-        this.setState({
-            personalInfo: {
-                ...this.state.personalInfo,
-                title: e.target.value,
-            },
-        });
-    };
-
-    handleInfoPhone = (e) => {
-        e.preventDefault();
-        this.setState({
-            personalInfo: {
-                ...this.state.personalInfo,
-                phone: e.target.value,
-            },
-        });
-    };
-
-    handleInfoEmail = (e) => {
-        e.preventDefault();
-        this.setState({
-            personalInfo: {
-                ...this.state.personalInfo,
-                email: e.target.value,
-            },
-        });
-    };
-
-    handleInfoCity = (e) => {
-        e.preventDefault();
-        this.setState({
-            personalInfo: {
-                ...this.state.personalInfo,
-                city: e.target.value,
-            },
-        });
-    };
-
     handleEduUniversity = (e) => {
         e.preventDefault();
         this.setState({
@@ -240,6 +190,16 @@ class Main extends Component {
         });
     };
 
+    handleContact = (e, item) => {
+        e.preventDefault();
+        this.setState({
+            personalInfo: {
+                ...this.state.personalInfo,
+                [item]: e.target.value,
+            },
+        });
+    };
+
     addEducation = (e) => {
         e.preventDefault();
         this.setState({
@@ -306,11 +266,7 @@ class Main extends Component {
             <div className="main">
                 <div className="left">
                     <Contact
-                        handleInfoName={this.handleInfoName}
-                        handleInfoTitle={this.handleInfoTitle}
-                        handleInfoPhone={this.handleInfoPhone}
-                        handleInfoEmail={this.handleInfoEmail}
-                        handleInfoCity={this.handleInfoCity}
+                        handleContact={this.handleContact}
                         data={this.state.personalInfo}
                     />
                     <Education

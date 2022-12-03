@@ -2,14 +2,7 @@ import React, { Component } from "react";
 
 class Contact extends Component {
     render() {
-        const {
-            handleInfoName,
-            handleInfoTitle,
-            handleInfoPhone,
-            handleInfoEmail,
-            handleInfoCity,
-            data,
-        } = this.props;
+        const { handleContact, data } = this.props;
 
         return (
             <div>
@@ -20,35 +13,35 @@ class Contact extends Component {
                         id="contact-name"
                         placeholder="Full Name"
                         value={data.name}
-                        onChange={handleInfoName}
+                        onChange={(event) => handleContact(event, "name")}
                     />
                     <input
                         type="text"
                         id="contact-title"
                         placeholder="Title"
                         value={data.title}
-                        onChange={handleInfoTitle}
+                        onChange={(event) => handleContact(event, "title")}
                     />
                     <input
                         type="tel"
                         id="contact-phone"
                         placeholder="Phone Number"
                         value={data.phone}
-                        onChange={handleInfoPhone}
+                        onChange={(event) => handleContact(event, "phone")}
                     />
                     <input
                         type="email"
                         id="contact-email"
                         placeholder="Email"
                         value={data.email}
-                        onChange={handleInfoEmail}
+                        onChange={(event) => handleContact(event, "email")}
                     />
                     <input
                         type="text"
                         id="contact-city"
                         placeholder="City"
                         value={data.city}
-                        onChange={handleInfoCity}
+                        onChange={(event) => handleContact(event, "city")}
                     />
                 </form>
             </div>

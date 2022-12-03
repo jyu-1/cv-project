@@ -2,7 +2,7 @@ import uniqid from "uniqid";
 
 const data = {
     personalInfo: {
-        name: "Jane Apple",
+        name: "BRUCE WAYNE",
         title: "Software Engineer",
         phone: "(626)123-4567",
         email: "jane@apple.com",

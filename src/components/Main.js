@@ -18,7 +18,10 @@ class Main extends Component {
         this.setState({
             personalInfo: {
                 ...this.state.personalInfo,
-                [item]: e.target.value,
+                [item]:
+                    item === "name"
+                        ? e.target.value.toUpperCase()
+                        : e.target.value,
             },
         });
     };

@@ -7,35 +7,63 @@ class Resume extends Component {
         return (
             <div>
                 <div className="info">
-                    <div>{info.name}</div>
-                    <div>{info.title}</div>
-                    <div>{info.phone}</div>
-                    <div>{info.email}</div>
-                    <div>{info.city}</div>
+                    <div className="info-left">
+                        <div className="name">{info.name}</div>
+                        <div className="title">{info.title}</div>
+                    </div>
+                    <div className="info-right">
+                        <div>{info.phone}</div>
+                        <div>{info.email}</div>
+                        <div>{info.city}</div>
+                    </div>
                 </div>
-                <div className="edu">
-                    {education.module.map((e) => {
+                <hr />
+                <div>
+                    <div className="resume-section-title">WORK EXPERIENCE</div>
+                    {experience.module.map((e) => {
                         return (
-                            <div key={e.key}>
-                                <div>{e.university}</div>
-                                <div>{e.city}</div>
-                                <div>{e.degree}</div>
-                                <div>{e.start}</div>
-                                <div>{e.end}</div>
+                            <div className="resume-section" key={e.key}>
+                                <div>
+                                    <div className="stick-right">
+                                        {e.company}
+                                    </div>
+                                    <span>
+                                        {e.start} - {e.end}
+                                    </span>
+                                </div>
+                                <div>
+                                    <div className="stick-right">
+                                        {e.position}
+                                    </div>
+                                    <div>{e.city}</div>
+                                </div>
+                                <div className="description-display">
+                                    {e.description}
+                                </div>
                             </div>
                         );
                     })}
                 </div>
-                <div className="exp">
-                    {experience.module.map((e) => {
+                <hr />
+                <div>
+                    <div className="resume-section-title">EDUCATION</div>
+                    {education.module.map((e) => {
                         return (
-                            <div key={e.key}>
-                                <div>{e.position}</div>
-                                <div>{e.company}</div>
-                                <div>{e.city}</div>
-                                <div>{e.start}</div>
-                                <div>{e.end}</div>
-                                <div>{e.description}</div>
+                            <div className="resume-section" key={e.key}>
+                                <div>
+                                    <div className="stick-right">
+                                        {e.university}
+                                    </div>
+                                    <span>
+                                        {e.start} - {e.end}
+                                    </span>
+                                </div>
+                                <div>
+                                    <div className="stick-right">
+                                        {e.degree}
+                                    </div>
+                                    <div>{e.city}</div>
+                                </div>
                             </div>
                         );
                     })}

@@ -119,18 +119,18 @@ class Main extends Component {
                         data={this.state.personalInfo}
                     />
                     <hr />
-                    <Education
-                        handleEducation={this.handleEducation}
-                        addEducation={this.addEducation}
-                        deleteEducation={this.deleteEducation}
-                        data={this.state.educationInfo}
-                    />
-                    <hr />
                     <Experience
                         handleExperience={this.handleExperience}
                         addExperience={this.addExperience}
                         deleteExperience={this.deleteExperience}
                         data={this.state.experienceInfo}
+                    />
+                    <hr />
+                    <Education
+                        handleEducation={this.handleEducation}
+                        addEducation={this.addEducation}
+                        deleteEducation={this.deleteEducation}
+                        data={this.state.educationInfo}
                     />
                 </div>
                 <div className="right">

@@ -6,14 +6,14 @@ const data = {
         title: "Software Engineer",
         phone: "(626)123-4567",
         email: "jane@apple.com",
-        city: "Los Angeles",
+        city: "Los Angeles, CA",
     },
 
     educationInfo: {
         module: [
             {
                 university: "University of Southern California",
-                city: "Los Angeles",
+                city: "Los Angeles, CA",
                 degree: "Electrical Engineer",
                 start: "June 2016",
                 end: "June 2018",
@@ -25,9 +25,9 @@ const data = {
     experienceInfo: {
         module: [
             {
-                position: "Software Engineer",
                 company: "Engineering Company",
-                city: "Los Angeles",
+                position: "Software Engineer",
+                city: "Los Angeles, CA",
                 start: "June 2018",
                 end: "Current",
                 description:

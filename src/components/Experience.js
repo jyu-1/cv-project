@@ -15,65 +15,74 @@ class Experience extends Component {
                 </div>
                 {data.module.map((e) => {
                     return (
-                        <form key={e.key}>
-                            <input
-                                type="text"
-                                id="exp-position"
-                                placeholder="Position"
-                                value={e.position}
-                                onChange={(event) =>
-                                    handleExperience(event, e.key, "position")
-                                }
-                            />
-                            <input
-                                type="text"
-                                id="exp-company"
-                                placeholder="Company"
-                                value={e.company}
-                                onChange={(event) =>
-                                    handleExperience(event, e.key, "company")
-                                }
-                            />
-                            <input
-                                type="text"
-                                id="exp-city"
-                                placeholder="City"
-                                value={e.city}
-                                onChange={(event) =>
-                                    handleExperience(event, e.key, "city")
-                                }
-                            />
-                            <input
-                                type="text"
-                                id="exp-start"
-                                placeholder="Start Date"
-                                value={e.start}
-                                onChange={(event) =>
-                                    handleExperience(event, e.key, "start")
-                                }
-                            />
-                            <input
-                                type="text"
-                                id="exp-end"
-                                placeholder="End Date"
-                                value={e.end}
-                                onChange={(event) =>
-                                    handleExperience(event, e.key, "end")
-                                }
-                            />
-                            <input
-                                text="textarea"
-                                id="exp-description"
-                                placeholder="Job Description"
-                                value={e.description}
-                                onChange={(event) =>
-                                    handleExperience(
-                                        event,
-                                        e.key,
-                                        "description"
-                                    )
-                                }
-                            />
+                        <div className="left-form" key={e.key}>
+                            <form>
+                                <input
+                                    type="text"
+                                    id="exp-company"
+                                    placeholder="Company"
+                                    value={e.company}
+                                    onChange={(event) =>
+                                        handleExperience(
+                                            event,
+                                            e.key,
+                                            "company"
+                                        )
+                                    }
+                                />
+                                <input
+                                    type="text"
+                                    id="exp-position"
+                                    placeholder="Position"
+                                    value={e.position}
+                                    onChange={(event) =>
+                                        handleExperience(
+                                            event,
+                                            e.key,
+                                            "position"
+                                        )
+                                    }
+                                />
+                                <input
+                                    type="text"
+                                    id="exp-city"
+                                    placeholder="City"
+                                    value={e.city}
+                                    onChange={(event) =>
+                                        handleExperience(event, e.key, "city")
+                                    }
+                                />
+                                <input
+                                    type="text"
+                                    id="exp-start"
+                                    placeholder="Start Date"
+                                    value={e.start}
+                                    onChange={(event) =>
+                                        handleExperience(event, e.key, "start")
+                                    }
+                                />
+                                <input
+                                    type="text"
+                                    id="exp-end"
+                                    placeholder="End Date"
+                                    value={e.end}
+                                    onChange={(event) =>
+                                        handleExperience(event, e.key, "end")
+                                    }
+                                />
+                                <textarea
+                                    id="exp-description"
+                                    placeholder="Job Description"
+                                    value={e.description}
+                                    onChange={(event) =>
+                                        handleExperience(
+                                            event,
+                                            e.key,
+                                            "description"
+                                        )
+                                    }
+                                />
+                            </form>
                             <button
                                 className="delete-button"
                                 onClick={(event) =>
@@ -82,7 +91,7 @@ class Experience extends Component {
                             >
                                 Delete
                             </button>
-                        </form>
+                        </div>
                     );
                 })}
             </div>

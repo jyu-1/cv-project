@@ -132,6 +132,17 @@ textarea {
 
 .description-display {
     white-space: pre-line;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+.top-line {
+    font-weight: bold;
+}
+
+.bot-line {
+    color: rgb(100, 100, 100);
+    font-style: italic;
 }
 
 /* Info Bar */
@@ -147,7 +158,7 @@ textarea {
 .info-right {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .name {
@@ -155,7 +166,7 @@ textarea {
 }
 
 .title {
-    color: grey;
+    color: rgb(100, 100, 100);
     margin-top: 10px;
     font-size: 1.5rem;
 }
@@ -173,6 +184,7 @@ textarea {
 
 .resume-section > * {
     display: flex;
+    margin-bottom: 5px;
 }
 
 .stick-right {

@@ -14,7 +14,7 @@ const data = {
             {
                 university: "University of Southern California",
                 city: "Los Angeles, CA",
-                degree: "Electrical Engineer",
+                degree: "Bachelor of Science: Electrical Engineer",
                 start: "June 2016",
                 end: "June 2018",
                 key: uniqid(),
@@ -31,7 +31,7 @@ const data = {
                 start: "June 2018",
                 end: "Current",
                 description:
-                    "Full-stack Software Engineer. Using React, Javascript, HTML and CSS for front-end; NodeJS for backend.",
+                    "• Builds, designs, and maintains all websites and software applications\n• Regulates exposure to business stakeholders and executive management as well as other authorities\n• Designs, writes, and edits website content\n• Understands UI, cross-browser compatibility, and general web functions and standards",
                 key: uniqid(),
             },
         ],

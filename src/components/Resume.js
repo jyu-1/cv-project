@@ -24,18 +24,18 @@ class Resume extends Component {
                         return (
                             <div className="resume-section" key={e.key}>
                                 <div>
-                                    <div className="stick-right">
+                                    <div className="stick-right top-line">
                                         {e.company}
                                     </div>
-                                    <span>
+                                    <span className="top-line">
                                         {e.start} - {e.end}
                                     </span>
                                 </div>
                                 <div>
-                                    <div className="stick-right">
+                                    <div className="stick-right bot-line">
                                         {e.position}
                                     </div>
-                                    <div>{e.city}</div>
+                                    <div className="bot-line">{e.city}</div>
                                 </div>
                                 <div className="description-display">
                                     {e.description}
@@ -51,18 +51,18 @@ class Resume extends Component {
                         return (
                             <div className="resume-section" key={e.key}>
                                 <div>
-                                    <div className="stick-right">
+                                    <div className="stick-right top-line">
                                         {e.university}
                                     </div>
-                                    <span>
+                                    <span className="top-line">
                                         {e.start} - {e.end}
                                     </span>
                                 </div>
                                 <div>
-                                    <div className="stick-right">
+                                    <div className="stick-right bot-line">
                                         {e.degree}
                                     </div>
-                                    <div>{e.city}</div>
+                                    <div className="bot-line">{e.city}</div>
                                 </div>
                             </div>
                         );

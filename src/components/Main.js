@@ -47,149 +47,6 @@ class Main extends Component {
         };
     }
 
-    handleEduUniversity = (e) => {
-        e.preventDefault();
-        this.setState({
-            educationInfo: {
-                module: [
-                    {
-                        university: e.target.value,
-                    },
-                ],
-            },
-        });
-    };
-
-    handleEduCity = (e) => {
-        e.preventDefault();
-        this.setState({
-            educationInfo: {
-                module: [
-                    {
-                        city: e.target.value,
-                    },
-                ],
-            },
-        });
-    };
-
-    handleEduDegree = (e) => {
-        e.preventDefault();
-        this.setState({
-            educationInfo: {
-                module: [
-                    {
-                        degree: e.target.value,
-                    },
-                ],
-            },
-        });
-    };
-
-    handleEduStart = (e) => {
-        e.preventDefault();
-        this.setState({
-            educationInfo: {
-                module: [
-                    {
-                        start: e.target.value,
-                    },
-                ],
-            },
-        });
-    };
-
-    handleEduEnd = (e) => {
-        e.preventDefault();
-        this.setState({
-            educationInfo: {
-                module: [
-                    {
-                        end: e.target.value,
-                    },
-                ],
-            },
-        });
-    };
-
-    handleExpPosition = (e) => {
-        e.preventDefault();
-        this.setState({
-            experienceInfo: {
-                module: [
-                    {
-                        position: e.target.value,
-                    },
-                ],
-            },
-        });
-    };
-
-    handleExpCompany = (e) => {
-        e.preventDefault();
-        this.setState({
-            experienceInfo: {
-                module: [
-                    {
-                        company: e.target.value,
-                    },
-                ],
-            },
-        });
-    };
-
-    handleExpCity = (e) => {
-        e.preventDefault();
-        this.setState({
-            experienceInfo: {
-                module: [
-                    {
-                        city: e.target.value,
-                    },
-                ],
-            },
-        });
-    };
-
-    handleExpStart = (e) => {
-        e.preventDefault();
-        this.setState({
-            experienceInfo: {
-                module: [
-                    {
-                        start: e.target.value,
-                    },
-                ],
-            },
-        });
-    };
-
-    handleExpEnd = (e) => {
-        e.preventDefault();
-        this.setState({
-            experienceInfo: {
-                module: [
-                    {
-                        end: e.target.value,
-                    },
-                ],
-            },
-        });
-    };
-
-    handleExpDescription = (e) => {
-        e.preventDefault();
-        this.setState({
-            experienceInfo: {
-                module: [
-                    {
-                        description: e.target.value,
-                    },
-                ],
-            },
-        });
-    };
-
     handleContact = (e, item) => {
         e.preventDefault();
         this.setState({
@@ -239,7 +96,7 @@ class Main extends Component {
         });
     };
 
-    deleteEdu = (e, key) => {
+    deleteEducation = (e, key) => {
         e.preventDefault();
         this.setState({
             educationInfo: {
@@ -250,7 +107,7 @@ class Main extends Component {
         });
     };
 
-    deleteExp = (e, key) => {
+    deleteExperience = (e, key) => {
         e.preventDefault();
         this.setState({
             experienceInfo: {
@@ -270,24 +127,15 @@ class Main extends Component {
                         data={this.state.personalInfo}
                     />
                     <Education
-                        handleEduUniversity={this.handleEduUniversity}
-                        handleEduCity={this.handleEduCity}
-                        handleEduDegree={this.handleEduDegree}
-                        handleEduStart={this.handleEduStart}
-                        handleEduEnd={this.handleEduEnd}
-                        addEdu={this.addEducation}
-                        deleteEdu={this.deleteEdu}
+                        handleEducation={this.handleEducation}
+                        addEducation={this.addEducation}
+                        deleteEducation={this.deleteEducation}
                         data={this.state.educationInfo}
                     />
                     <Experience
-                        handleExpPosition={this.handleExpPosition}
-                        handleExpCompany={this.handleExpCompany}
-                        handleExpCity={this.handleExpCity}
-                        handleExpStart={this.handleExpStart}
-                        handleExpEnd={this.handleExpEnd}
-                        handleExpDescription={this.handleExpDescription}
-                        addExp={this.addExperience}
-                        deleteExp={this.deleteExp}
+                        handleExperience={this.handleExperience}
+                        addExperience={this.addExperience}
+                        deleteExperience={this.deleteExperience}
                         data={this.state.experienceInfo}
                     />
                 </div>

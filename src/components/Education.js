@@ -2,16 +2,8 @@ import React, { Component } from "react";
 
 class Education extends Component {
     render() {
-        const {
-            data,
-            addEdu,
-            deleteEdu,
-            handleEduUniversity,
-            handleEduCity,
-            handleEduDegree,
-            handleEduStart,
-            handleEduEnd,
-        } = this.props;
+        const { data, handleEducation, addEducation, deleteEducation } =
+            this.props;
 
         return (
             <div>
@@ -25,7 +17,7 @@ class Education extends Component {
                                 placeholder="University"
                                 value={e.university}
                                 onChange={(event) =>
-                                    handleEduUniversity(event, e.key)
+                                    handleEducation(event, e.key, "university")
                                 }
                             />
                             <input
@@ -34,7 +26,7 @@ class Education extends Component {
                                 placeholder="City"
                                 value={e.city}
                                 onChange={(event) =>
-                                    handleEduCity(event, e.key)
+                                    handleEducation(event, e.key, "university")
                                 }
                             />
                             <input
@@ -43,7 +35,7 @@ class Education extends Component {
                                 placeholder="Degree and Major"
                                 value={e.degree}
                                 onChange={(event) =>
-                                    handleEduDegree(event, e.key)
+                                    handleEducation(event, e.key, "university")
                                 }
                             />
                             <input
@@ -52,7 +44,7 @@ class Education extends Component {
                                 placeholder="Start Month and Year"
                                 value={e.start}
                                 onChange={(event) =>
-                                    handleEduStart(event, e.key)
+                                    handleEducation(event, e.key, "university")
                                 }
                             />
                             <input
@@ -60,10 +52,14 @@ class Education extends Component {
                                 id="uni-end"
                                 placeholder="Graduate Month and Year"
                                 value={e.end}
-                                onChange={(event) => handleEduEnd(event, e.key)}
+                                onChange={(event) =>
+                                    handleEducation(event, e.key, "university")
+                                }
                             />
                             <button
-                                onClick={(event) => deleteEdu(event, e.key)}
+                                onClick={(event) =>
+                                    deleteEducation(event, e.key)
+                                }
                             >
                                 Delete
                             </button>
@@ -71,7 +67,7 @@ class Education extends Component {
                     );
                 })}
 
-                <button onClick={addEdu}>Add</button>
+                <button onClick={addEducation}>Add</button>
             </div>
         );
     }

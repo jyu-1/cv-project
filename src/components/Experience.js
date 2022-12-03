@@ -2,17 +2,8 @@ import React, { Component } from "react";
 
 class Experience extends Component {
     render() {
-        const {
-            data,
-            addExp,
-            deleteExp,
-            handleExpPosition,
-            handleExpCompany,
-            handleExpCity,
-            handleExpStart,
-            handleExpEnd,
-            handleExpDescription,
-        } = this.props;
+        const { data, handleExperience, addExperience, deleteExperience } =
+            this.props;
 
         return (
             <div>
@@ -26,7 +17,7 @@ class Experience extends Component {
                                 placeholder="Position"
                                 value={e.position}
                                 onChange={(event) =>
-                                    handleExpPosition(event, e.key)
+                                    handleExperience(event, e.key, "position")
                                 }
                             />
                             <input
@@ -35,7 +26,7 @@ class Experience extends Component {
                                 placeholder="Company"
                                 value={e.company}
                                 onChange={(event) =>
-                                    handleExpCompany(event, e.key)
+                                    handleExperience(event, e.key, "position")
                                 }
                             />
                             <input
@@ -44,7 +35,7 @@ class Experience extends Component {
                                 placeholder="City"
                                 value={e.city}
                                 onChange={(event) =>
-                                    handleExpCity(event, e.key)
+                                    handleExperience(event, e.key, "position")
                                 }
                             />
                             <input
@@ -53,7 +44,7 @@ class Experience extends Component {
                                 placeholder="Start Date"
                                 value={e.start}
                                 onChange={(event) =>
-                                    handleExpStart(event, e.key)
+                                    handleExperience(event, e.key, "position")
                                 }
                             />
                             <input
@@ -61,7 +52,9 @@ class Experience extends Component {
                                 id="exp-end"
                                 placeholder="End Date"
                                 value={e.end}
-                                onChange={(event) => handleExpEnd(event, e.key)}
+                                onChange={(event) =>
+                                    handleExperience(event, e.key, "position")
+                                }
                             />
                             <input
                                 text="textarea"
@@ -69,18 +62,20 @@ class Experience extends Component {
                                 placeholder="Job Description"
                                 value={e.description}
                                 onChange={(event) =>
-                                    handleExpDescription(event, e.key)
+                                    handleExperience(event, e.key, "position")
                                 }
                             />
                             <button
-                                onClick={(event) => deleteExp(event, e.key)}
+                                onClick={(event) =>
+                                    deleteExperience(event, e.key)
+                                }
                             >
                                 Delete
                             </button>
                         </form>
                     );
                 })}
-                <button onClick={addExp}>Add</button>
+                <button onClick={addExperience}>Add</button>
             </div>
         );
     }

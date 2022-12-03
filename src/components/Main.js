@@ -25,12 +25,28 @@ class Main extends Component {
 
     handleEducation = (e, key, item) => {
         e.preventDefault();
-        console.log(key + item);
+        this.setState({
+            educationInfo: {
+                module: this.state.educationInfo.module.map((moduleItem) => {
+                    if (moduleItem.key === key)
+                        return { ...moduleItem, [item]: e.target.value };
+                    else return moduleItem;
+                }),
+            },
+        });
     };
 
     handleExperience = (e, key, item) => {
         e.preventDefault();
-        console.log(key + item);
+        this.setState({
+            experienceInfo: {
+                module: this.state.experienceInfo.module.map((moduleItem) => {
+                    if (moduleItem.key === key)
+                        return { ...moduleItem, [item]: e.target.value };
+                    else return moduleItem;
+                }),
+            },
+        });
     };
 
     addEducation = (e) => {

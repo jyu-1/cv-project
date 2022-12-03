@@ -30,7 +30,8 @@ const data = {
                 city: "Los Angeles",
                 start: "6/18",
                 end: "Current",
-                description: "Full-stack Software Engineer",
+                description:
+                    "Full-stack Software Engineer. Using React, Javascript, HTML and CSS for front-end; NodeJS for backend.",
                 key: uniqid(),
             },
         ],

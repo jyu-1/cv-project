@@ -26,7 +26,7 @@ class Education extends Component {
                                 placeholder="City"
                                 value={e.city}
                                 onChange={(event) =>
-                                    handleEducation(event, e.key, "university")
+                                    handleEducation(event, e.key, "city")
                                 }
                             />
                             <input
@@ -35,7 +35,7 @@ class Education extends Component {
                                 placeholder="Degree and Major"
                                 value={e.degree}
                                 onChange={(event) =>
-                                    handleEducation(event, e.key, "university")
+                                    handleEducation(event, e.key, "degree")
                                 }
                             />
                             <input
@@ -44,7 +44,7 @@ class Education extends Component {
                                 placeholder="Start Month and Year"
                                 value={e.start}
                                 onChange={(event) =>
-                                    handleEducation(event, e.key, "university")
+                                    handleEducation(event, e.key, "start")
                                 }
                             />
                             <input
@@ -53,7 +53,7 @@ class Education extends Component {
                                 placeholder="Graduate Month and Year"
                                 value={e.end}
                                 onChange={(event) =>
-                                    handleEducation(event, e.key, "university")
+                                    handleEducation(event, e.key, "end")
                                 }
                             />
                             <button

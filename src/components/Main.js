@@ -4,47 +4,13 @@ import Contact from "./Contact";
 import Education from "./Education";
 import Experience from "./Experience";
 import Resume from "./Resume";
+import data from "./DefaultData";
 
 class Main extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {
-            personalInfo: {
-                name: "Apple Seed",
-                title: "Software Engineer",
-                phone: "1234567890",
-                email: "apple@seed.com",
-                city: "Los Angeles",
-            },
-
-            educationInfo: {
-                module: [
-                    {
-                        university: "University of Southern California",
-                        city: "Los Angeles",
-                        degree: "Electrical Engineer",
-                        start: "6/16",
-                        end: "6/18",
-                        key: uniqid(),
-                    },
-                ],
-            },
-
-            experienceInfo: {
-                module: [
-                    {
-                        position: "Software Engineer",
-                        company: "Engineering Company",
-                        city: "Los Angeles",
-                        start: "6/18",
-                        end: "Current",
-                        description: "Full-stack Software Engineer",
-                        key: uniqid(),
-                    },
-                ],
-            },
-        };
+        this.state = data;
     }
 
     handleContact = (e, item) => {
@@ -55,6 +21,16 @@ class Main extends Component {
                 [item]: e.target.value,
             },
         });
+    };
+
+    handleEducation = (e, key, item) => {
+        e.preventDefault();
+        console.log(key + item);
+    };
+
+    handleExperience = (e, key, item) => {
+        e.preventDefault();
+        console.log(key + item);
     };
 
     addEducation = (e) => {

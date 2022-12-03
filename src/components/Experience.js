@@ -26,7 +26,7 @@ class Experience extends Component {
                                 placeholder="Company"
                                 value={e.company}
                                 onChange={(event) =>
-                                    handleExperience(event, e.key, "position")
+                                    handleExperience(event, e.key, "company")
                                 }
                             />
                             <input
@@ -35,7 +35,7 @@ class Experience extends Component {
                                 placeholder="City"
                                 value={e.city}
                                 onChange={(event) =>
-                                    handleExperience(event, e.key, "position")
+                                    handleExperience(event, e.key, "city")
                                 }
                             />
                             <input
@@ -44,7 +44,7 @@ class Experience extends Component {
                                 placeholder="Start Date"
                                 value={e.start}
                                 onChange={(event) =>
-                                    handleExperience(event, e.key, "position")
+                                    handleExperience(event, e.key, "start")
                                 }
                             />
                             <input
@@ -53,7 +53,7 @@ class Experience extends Component {
                                 placeholder="End Date"
                                 value={e.end}
                                 onChange={(event) =>
-                                    handleExperience(event, e.key, "position")
+                                    handleExperience(event, e.key, "end")
                                 }
                             />
                             <input
@@ -62,7 +62,11 @@ class Experience extends Component {
                                 placeholder="Job Description"
                                 value={e.description}
                                 onChange={(event) =>
-                                    handleExperience(event, e.key, "position")
+                                    handleExperience(
+                                        event,
+                                        e.key,
+                                        "description"
+                                    )
                                 }
                             />
                             <button
